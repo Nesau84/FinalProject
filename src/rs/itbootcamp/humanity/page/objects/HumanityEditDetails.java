@@ -9,6 +9,8 @@ public class HumanityEditDetails {
 	private static final String CLICK_ALLSTAFF_XPATH = "//a[@class='mi first mitem']";
 	private static final String CLICK_STAFF_MEMBER_XPATH = "//a[contains(text(),'Duki duca')]";
 	private static final String EDIT_DETAILS_XPATH = "//a[contains(text(),'Edit Details')]";
+	private static final String NICKNAME_XPATH = "//input[@id='nick_name']";
+	private static final String SAVE_EMPLOYEE_XPATH = "//button[@id='act_primary']";
 
 	public static WebElement getAllStaff(WebDriver driver) {
 		return driver.findElement(By.xpath(CLICK_ALLSTAFF_XPATH));
@@ -32,5 +34,20 @@ public class HumanityEditDetails {
 
 	public static void clickDetails(WebDriver driver) {
 		getDetails(driver).click();
+	}
+	public static WebElement getNickname(WebDriver driver) {
+		return driver.findElement(By.xpath(NICKNAME_XPATH));
+	}
+	public static void clickNickname(WebDriver driver) {
+		getNickname(driver).click();
+	}
+	public static void inputNickname(WebDriver driver, String nickname) {
+		getNickname(driver).sendKeys(nickname);
+	}
+	public static WebElement getSaveEmployee(WebDriver driver) {
+		return driver.findElement(By.xpath(SAVE_EMPLOYEE_XPATH));
+	}
+	public static void clickSaveEmployee(WebDriver driver) {
+		getSaveEmployee(driver).click();
 	}
 }

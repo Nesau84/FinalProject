@@ -14,7 +14,8 @@ public class HumanityMenu {
 	private static final String STAFF_XPATH = "//a[@id='sn_staff']//span[@class='primNavQtip__inner']";
 	private static final String PAYROLL_XPATH = "//i[@class='primNavQtip__icon icon-payroll']";
 	private static final String REPORTS_XPATH = "//a[@id='sn_reports']//span[@class='primNavQtip__inner']";
-
+	
+	
 	public static WebElement getDashBoard(WebDriver driver) {
 		return driver.findElement(By.xpath(DASHBOARD_XPATH));
 
@@ -79,4 +80,5 @@ public class HumanityMenu {
 	public static void clickReports(WebDriver driver) {
 		getReports(driver).click();
 	}
+	
 }
