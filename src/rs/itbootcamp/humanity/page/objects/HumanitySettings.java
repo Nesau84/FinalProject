@@ -10,6 +10,8 @@ public class HumanitySettings {
 	private static final String SELECT_COUNTRY_XPATH = "//select[@id='country']";
 	private static final String DEFAULT_LANGUAGE_XPATH = "//td[@class='nowrap']//select[@name='language']";
 	private static final String TIMEFORMAT_XPATH ="//select[@name='pref_24hr']";
+	private static final String SAVE_SETTINGS_XPATH ="//button[@id='act_primary']";
+	
 	
 	public static WebElement getSettings(WebDriver driver) {
 		return driver.findElement(By.xpath(SETTINGS_XPATH));
@@ -36,5 +38,11 @@ public class HumanitySettings {
 	}
 	public static void selectTime(WebDriver driver, String time) {
 		getTimeFormat(driver).selectByVisibleText(time);
+	}
+	public static WebElement getSaveSettings(WebDriver driver) {
+		return driver.findElement(By.xpath(SAVE_SETTINGS_XPATH));
+	}
+	public static void clickSaveSettings(WebDriver driver) {
+		getSaveSettings(driver).click();
 	}
 }
