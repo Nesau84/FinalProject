@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class HumanityEditDetails {
 
-	private static final String CLICK_ALLSTAFF_XPATH = "//a[@class='mi first mitem']";
-	private static final String CLICK_STAFF_MEMBER_XPATH = "//a[contains(text(),'Duki duca')]";
+	private static final String CLICK_ALLSTAFF_XPATH = "//a[contains(@class,'mi first mitem dent')]";
+	private static final String CLICK_STAFF_MEMBER_XPATH = "//tr[2]//td[2]//a[1]";
 	private static final String EDIT_DETAILS_XPATH = "//a[contains(text(),'Edit Details')]";
 	private static final String NICKNAME_XPATH = "//input[@id='nick_name']";
 	private static final String SAVE_EMPLOYEE_XPATH = "//button[@id='act_primary']";

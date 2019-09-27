@@ -70,5 +70,7 @@ public class HumanityStaff {
 
 	public static void clickSaveEmployee(WebDriver driver) {
 		getSaveEmployee(driver).click();
-	}
+
+}
+	
 }

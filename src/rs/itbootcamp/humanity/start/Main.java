@@ -57,6 +57,7 @@ public class Main {
 				HumanityLoginTests.testLogin(driver);
 
 				HumanityStaff.clickStaff(driver);
+				Thread.sleep(3000);
 				HumanityStaff.clickAddEmployees(driver);
 				Thread.sleep(3000);
 				
@@ -65,12 +66,14 @@ public class Main {
 				HumanityStaff.clickLastName(driver);
 				HumanityStaff.inputLastName(driver, "Bobicicx");
 				HumanityStaff.clickEmail(driver);
-				HumanityStaff.inputEmail(driver, "BbobwDuleence@gmail.com");
+				HumanityStaff.inputEmail(driver, "BobyDulleenccce@gmail.com");
 
 				HumanityStaff.clickSaveEmployee(driver);
+				Thread.sleep(3000);
 				HumanityAddNewEmployeeTests.testAddEmployee(driver);
 
 				Thread.sleep(3000);
+				
 				break;
 
 			case 2:
@@ -117,15 +120,15 @@ public class Main {
 				HumanityHome.clickPassword(driver);
 				HumanityHome.inputPassword(driver, "asdzxc");
 				HumanityHome.clickLogedIn(driver);
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				HumanityStaff.clickStaff(driver);
-				HumanityEditDetails.clickAllStaff(driver);
+				
 				HumanityEditDetails.clickStaffMember(driver);
 				HumanityEditDetails.clickDetails(driver);
 				String xpTHSLIKA = "//input[@id='fileupload']";
 				String putanja = "C:\\Users\\User\\Desktop\\APACHE POI LIB\\download.jpg";
-				String url = "https://neko.humanity.com/app/staff/edit/5093475/";
-				driver.get(url);
+				//String url = "https://neko.humanity.com/app/staff/edit/5093475/";
+				//driver.get(url);
 				WebElement choosefile = driver.findElement(By.xpath(xpTHSLIKA));
 				choosefile.sendKeys(putanja);
 				HumanityEditDetails.clickSaveEmployee(driver);
@@ -152,8 +155,9 @@ public class Main {
 				HumanityHome.clickLogedIn(driver);
 				
 				
-
+				Thread.sleep(3000);
 				HumanityStaff.clickStaff(driver);
+				HumanityStaff.clickAddEmployees(driver);
 				String DATA = "Data.xls";
 				ExcelUtils.setExcell(DATA);
 				ExcelUtils.setWorkSheet("Zaposleni");
@@ -169,9 +173,10 @@ public class Main {
 					HumanityStaff.clickSaveEmployee(driver);
 					Thread.sleep(5000);
 					HumanityStaff.clickAddEmployees(driver);
-					break;
+					
 				
 				}
+				break;
 			default: System.out.println("Pogresan unos, dozvoljeni unosi su brojevi od 0 do 5");
 
 			}
